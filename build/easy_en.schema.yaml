@@ -1,0 +1,96 @@
+__build_info:
+  rime_version: 1.11.2
+  timestamps:
+    default: 1743499071
+    default.custom: 1743414817
+    easy_en.custom: 0
+    easy_en.schema: 1743414407
+easy_en:
+  split_sentence: true
+  use_wordninja_py: false
+  use_wordninja_rs: false
+  use_wordninja_rs_lua_module: false
+  wordninja_rs_lua_module_path: "/usr/lib/lua/5.4/wordninja.so"
+  wordninja_rs_path: "/usr/bin/wordninja"
+engine:
+  filters:
+    - uniquifier
+    - "lua_filter@*easy_en*enhance_filter"
+  processors:
+    - ascii_composer
+    - key_binder
+    - speller
+    - recognizer
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - matcher
+    - ascii_segmentor
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - table_translator
+    - punct_translator
+key_binder:
+  bindings:
+    - {accept: "Shift+Tab", send: "Shift+Left", when: composing}
+    - {accept: Tab, send: "Shift+Right", when: composing}
+    - {accept: "Alt+Left", send: "Shift+Left", when: composing}
+    - {accept: "Alt+Right", send: "Shift+Right", when: composing}
+    - {accept: minus, send: Page_Up, when: has_menu}
+    - {accept: equal, send: Page_Down, when: has_menu}
+    - {accept: "Control+Shift+3", toggle: ascii_punct, when: always}
+    - {accept: "Control+Shift+numbersign", toggle: ascii_punct, when: always}
+    - {accept: "Control+Shift+4", toggle: traditionalization, when: always}
+    - {accept: "Control+Shift+dollar", toggle: traditionalization, when: always}
+    - {accept: KP_0, send: 0, when: composing}
+    - {accept: KP_1, send: 1, when: composing}
+    - {accept: KP_2, send: 2, when: composing}
+    - {accept: KP_3, send: 3, when: composing}
+    - {accept: KP_4, send: 4, when: composing}
+    - {accept: KP_5, send: 5, when: composing}
+    - {accept: KP_6, send: 6, when: composing}
+    - {accept: KP_7, send: 7, when: composing}
+    - {accept: KP_8, send: 8, when: composing}
+    - {accept: KP_9, send: 9, when: composing}
+    - {accept: KP_Decimal, send: period, when: composing}
+    - {accept: KP_Multiply, send: asterisk, when: composing}
+    - {accept: KP_Add, send: plus, when: composing}
+    - {accept: KP_Subtract, send: minus, when: composing}
+    - {accept: KP_Divide, send: slash, when: composing}
+  import_preset: default
+  select_first_character: bracketleft
+  select_last_character: bracketright
+menu:
+  page_size: 9
+recognizer:
+  import_preset: default
+  patterns:
+    email: "^[A-Za-z][-_.0-9A-Za-z]*@.*$"
+    underscore: "^[A-Za-z]+_.*"
+    uppercase: ""
+    url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$"
+schema:
+  author:
+    - "Patrick <ipatrickmac@gmail.com>"
+    - "BlindingDark <blindingdark@outlook.com>"
+  description: "Easy English"
+  name: "Easy English"
+  schema_id: easy_en
+  version: 0.10.1
+speller:
+  alphabet: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA
+  delimiter: " '"
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: ["ASCII-OFF", "ASCII-ON"]
+translator:
+  comment_format:
+    - "xform/^.+$//"
+  dictionary: easy_en
+  enable_user_dict: true
+  spelling_hints: 9
