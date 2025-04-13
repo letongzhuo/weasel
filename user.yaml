@@ -1,8 +1,8 @@
 var:
-  last_build_time: 1743769372
+  last_build_time: 1743932941
   previously_selected_schema: double_pinyin_flypy
   schema_access_time:
-    double_pinyin_flypy: 1743725327
-    easy_en: 1743665155
+    double_pinyin_flypy: 1744289030
+    easy_en: 1744288753
     melt_eng: 1743414895
-    rime_ice: 1743725302
+    rime_ice: 1743932656
