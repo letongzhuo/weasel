@@ -62,3 +62,4 @@ gone	gone
 Go程	gocheng
 code	code
 SOHO	soho
+tongzhuo0801@gmail.com	youxiang

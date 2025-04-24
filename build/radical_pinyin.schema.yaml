@@ -4,7 +4,7 @@ __build_info:
     default: 1743499071
     default.custom: 1743414817
     radical_pinyin.custom: 0
-    radical_pinyin.schema: 1743272993
+    radical_pinyin.schema: 1743272994
 algebra_abc:
   - "xform/^zh/<a>/"
   - "xform/^ch/<e>/"
