@@ -2,10 +2,10 @@ __build_info:
   rime_version: 1.11.2
   timestamps:
     default: 1743499071
-    default.custom: 1743414817
+    default.custom: 1746709437
     double_pinyin_flypy.custom: 0
-    double_pinyin_flypy.schema: 1743417586
-    symbols_caps_v: 1743272994
+    double_pinyin_flypy.schema: 1746709493
+    symbols_caps_v: 1743272993
     symbols_caps_v.custom: 0
 cn_en:
   comment_format:
@@ -56,6 +56,7 @@ engine:
     - "simplifier@traditionalize"
     - "lua_filter@*search@radical_pinyin"
     - uniquifier
+    - "lua_filter@*aux_code@flypy_full"
   processors:
     - "lua_processor@*select_character"
     - ascii_composer
@@ -744,7 +745,7 @@ speller:
     - "xform/ui$/Ⓥ/"
     - "xform/in$/Ⓑ/"
     - "xlit/ⓆⓌⓇⓉⓎⓊⒾⓄⓅⓈⒹⒻⒼⒽⒿⓀⓁⓏⓍⒸⓋⒷⓃⓂ/qwrtyuiopsdfghjklzxcvbnm/"
-  alphabet: "zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`"
+  alphabet: "zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA`;"
   delimiter: " '"
   initials: zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA
 switches:
